@@ -89,6 +89,43 @@ html, body {
 }
 
 
+.cocktails {
+    background: url(cocktails.png);
+    background-size: auto 100%;
+    border: 1px solid #8b0000;
+    color: white;
+}
+
+.sanguine-btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #8b0000;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(139, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
+  }
+}
+
+
 footer {
     position: fixed;
     left: 0;
