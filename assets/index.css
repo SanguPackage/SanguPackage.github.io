@@ -17,9 +17,9 @@ html, body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 80px;
 }
 
 
