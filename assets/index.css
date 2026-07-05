@@ -140,6 +140,17 @@ main {
     gap: 2rem;
 }
 
+/* Gold-on-black ornament: `screen` keys out the black, leaving only the rope */
+.divider {
+    display: block;
+    width: 100%;
+    max-width: 860px;
+    height: auto;
+    margin: 3rem auto 2.5rem;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
 /* ---------- Cards ---------- */
 
 .card {
