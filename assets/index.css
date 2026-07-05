@@ -106,6 +106,14 @@ main {
     color: var(--ink);
 }
 
+.fleet-heading .skull {
+    height: 0.95em;
+    width: auto;
+    vertical-align: -0.15em;
+    margin-right: 0.3em;
+    color: var(--bone); /* bone white for the skeleton; sockets stay dark */
+}
+
 /* Dark cartouche keeps the title legible over the busy parchment */
 .fleet-heading span {
     display: inline-block;
