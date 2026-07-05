@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <meta name="keywords" content="fallguys htpc sonarr radarr jellyfin tribalwars sangu sangupackage twtactics">
-    <meta name="description" content="">
-    <title>Sangu</title>
+    <meta name="keywords" content="fallguys htpc pirateflix sonarr radarr jellyfin tribalwars sangu sangupackage cocktails sanguine spirits">
+    <meta name="description" content="Sangu — a free, open-source, ad-free warband of side projects: PirateFlix home theater, Sanguine Spirits cocktails, plus the retired TribalWars and Fall Guys tools.">
+    <title>Sangu — Exsanguination</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/index.css" media="screen">
-    <link rel="stylesheet" href="./assets/tribalwars/tribalwars.css" media="screen">
 
     <meta property="og:type" content="website" />
-    <meta property="og:image" itemprop="image" content="https://sangu.be/assets/logo.png">
+    <meta property="og:image" itemprop="image" content="https://sangu.be/assets/sangu.jpg">
     <meta property="og:site_name" content="sangu.be">
-    <meta property="og:title" content="Exsanguination">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Sangu — Exsanguination" />
+    <meta property="og:description" content="A free, open-source, ad-free warband of side projects." />
     <meta property="og:url" content="https://sangu.be">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="500">
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/jpeg">
 
     <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </head>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30075487-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -35,75 +36,80 @@
 
 <body>
 
-    <div class="container">
-        <div class="box tribalwars">
-            <div id="tribalwars">
-                <div class="news box-border gold">
-                    <div class="top-left"></div>
-                    <div class="top-right"></div>
-                    <div class="middle-top"></div>
-                    <div class="middle-bottom"></div>
-                    <div class="middle-left"></div>
-                    <div class="middle-right"></div>
-                    <div class="bottom-left"></div>
-                    <div class="bottom-right"></div>
-                    <div class="inner seperated">
-                        <h4>Tribal Wars</h4>
-                        <p>
-                            Sangu - probably the best tribe on NL10 if not of all NL worlds.
-                            Explore and download the free tooling created by Sangu members.
-                        </p>
-                        <a href="https://tribalwars.sangu.be" class="read-more">
-                            read more
-                        </a>
+    <header class="masthead">
+        <div class="masthead-inner">
+            <h1>Sangu</h1>
+            <p class="tagline">Exsanguination</p>
+            <p class="manifesto">Free&ensp;·&ensp;Open-source (MIT)&ensp;·&ensp;Ad-free</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="fleet">
+            <h2 class="fleet-heading"><span>&#9875;&#65038; Still Sailing</span></h2>
+            <div class="cards">
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="./assets/pirateflix.jpg" alt="PirateFlix crest — a gilded skull in a ship's wheel">
                     </div>
-                </div>
+                    <div class="card-body">
+                        <h3>PirateFlix</h3>
+                        <p>A one-step Home Theater PC.
+                            <br>Docker hoists the sails — you just watch.</p>
+                        <a class="cta" href="https://sangu.be/htpc">Set sail &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <img src="./assets/sanguine-spirits.jpg" alt="Sanguine Spirits — a blood-red cocktail beside a dark bottle">
+                    </div>
+                    <div class="card-body">
+                        <h3>Sanguine Spirits</h3>
+                        <p>Dark, elegant cocktail recipes.<br>Warriors have taste buds too — pure indulgence.</p>
+                        <a class="cta" href="https://sangu.be/Sanguine-Spirits">Pour a measure &rarr;</a>
+                    </div>
+                </article>
+
             </div>
-        </div>
+        </section>
 
+        <section class="fleet retired-fleet">
+            <h2 class="fleet-heading"><span>&#9760;&#65038; Run Aground</span></h2>
+            <p class="fleet-note">Still afloat, no longer crewed — the tools work, but these voyages are over.</p>
+            <div class="cards">
 
-        <div class="box fallguys">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Fall Guys</h4>
-                    <p class="card-text">
-                        Tips & Tricks for all Fall Guys levels to help you rake in those elusive crowns!
-                    </p>
-                    <a href="https://sangu.be/fallguys" class="read-more">
-                        read more
-                    </a>
-                </div>
+                <article class="card retired">
+                    <div class="card-media">
+                        <img src="./assets/tribalwars.jpg" alt="TribalWars — crossed axes over a weathered clan shield">
+                    </div>
+                    <div class="card-body">
+                        <h3>TribalWars</h3>
+                        <p>Sangu was a TribalWars clan. The tools still work and see use, but the clan has sailed on.</p>
+                        <a class="cta" href="https://tribalwars.sangu.be">Plunder the tools &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card retired">
+                    <div class="card-media">
+                        <img src="./assets/fallguys.jpg" alt="Fall Guys — a cobwebbed crown atop dusty beans">
+                    </div>
+                    <div class="card-body">
+                        <h3>Fall Guys</h3>
+                        <p>Covid-era crown guides. Still pretty accurate — just no longer updated.</p>
+                        <a class="cta" href="https://sangu.be/fallguys">Read the guides &rarr;</a>
+                    </div>
+                </article>
+
             </div>
-        </div>
-
-
-        <div class="box htpc">
-            <h4>HTPC</h4>
-            <p>
-                A one step Home Theater PC (HTPC) setup with Docker.
-                <br /><br /><br />
-            </p>
-            <a href="https://sangu.be/htpc" class="read-more">
-                read more
-            </a>
-        </div>
-
-
-        <div class="box cocktails">
-            <h4>Sanguine Spirits</h4>
-            <p>
-                Dark, elegant cocktail recipes — pure indulgence, zero nonsense.
-                <br /><br /><br />
-            </p>
-            <a href="https://sangu.be/Sanguine-Spirits" class="sanguine-btn">
-                read more
-            </a>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
-        @ Exsanguination 2015 - 2025
+        Exsanguination &middot; 2015–2026
     </footer>
+
 </body>
 
 </html>

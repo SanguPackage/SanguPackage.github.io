@@ -1,138 +1,260 @@
-body {
-    background: url(background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 0;
-    margin: 0;
+:root {
+    --ink: #2b1d12;
+    --ink-soft: #4a3826;
+    --blood: #8b0000;
+    --blood-bright: #b02a2a;
+    --gold: #c9a227;
+    --gold-soft: #b8894b;
+    --bone: #f2e7d0;
+    --plate: rgba(26, 18, 12, 0.92);
 }
 
+* {
+    box-sizing: border-box;
+}
 
 html, body {
-    height: 100%;
-    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: "EB Garamond", Georgia, serif;
+    color: var(--ink);
 }
 
-.container {
+body {
+    background: #100b07 url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+    position: relative;
+    min-height: 42vh;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-bottom: 80px;
-}
-
-
-
-
-.box {
-    flex-grow: 1;
-    max-width: 450px;
-    margin: 25px;
     text-align: center;
-    color: black
+    padding: 4rem 1.5rem 3.5rem;
+    background: linear-gradient(rgba(16, 11, 7, 0.35), rgba(16, 11, 7, 0.6)),
+                url(sangu.jpg) no-repeat center center;
+    background-size: cover;
+    border-bottom: 3px solid var(--blood);
+    box-shadow: inset 0 -60px 60px -40px rgba(0, 0, 0, 0.8);
 }
 
-.box h4 {
-    font-size: 21px;
-    font-weight: 700;
+.masthead-inner {
+    max-width: 720px;
 }
 
-.box p {
-    padding: 20px;
-    font-weight: bold;
+.masthead h1 {
+    margin: 0;
+    font-family: "Cinzel Decorative", "Cinzel", serif;
+    font-weight: 900;
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7), 0 0 24px rgba(139, 0, 0, 0.5);
 }
 
-.box .read-more {
-    color: #111111;
-    background-color: white;
+.masthead .tagline {
+    margin: 0.2rem 0 1.6rem;
+    font-style: italic;
+    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+    letter-spacing: 0.35em;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin: 0 0 20px 0;
-    padding: 10px 58px 10px 57px;
-    text-decoration: none;
+    color: var(--blood-bright);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.masthead .manifesto {
     display: inline-block;
+    margin: 0;
+    padding: 0.55rem 1.4rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone);
+    background: rgba(16, 11, 7, 0.45);
+    border: 1px solid var(--gold-soft);
+    border-radius: 2px;
 }
 
-.box .read-more:hover {
-    background-color: #e6e6e6 !important;
+/* ---------- Fleet sections ---------- */
+
+main {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 1rem;
 }
 
-
-.fallguys {
-    margin-right: 60px;
+.fleet + .fleet {
+    margin-top: 3rem;
 }
 
-.fallguys .card {
-    border-radius: 40px;
-    background: #45DBF3;
-    border: 18px solid #2EC8EA;
+.fleet-heading {
+    text-align: center;
+    margin: 0 0 2rem;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
 
-    box-shadow: 0 0 0 20px white;
+/* Flanking rules on the section heading */
+.fleet-heading span {
+    display: inline-block;
+    position: relative;
+    padding: 0 1.4rem;
+}
 
+.fleet-heading span::before,
+.fleet-heading span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-soft));
+}
+
+.fleet-heading span::before { right: 100%; }
+.fleet-heading span::after {
+    left: 100%;
+    background: linear-gradient(90deg, var(--gold-soft), transparent);
+}
+
+.fleet-note {
+    text-align: center;
+    margin: -1.4rem auto 2rem;
+    max-width: 32rem;
+    font-style: italic;
+    color: var(--ink-soft);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gold-soft);
+    box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-media {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.card-media img {
     width: 100%;
     height: 100%;
-    margin: 10px auto;
-    position: relative;
+    object-fit: cover;
+    display: block;
 }
 
-.htpc {
-    background: url(htpc.jpg);
-    background-size: auto 100%;
-    border: 1px solid black;
-    color: deepskyblue;
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.6rem 1.5rem 1.8rem;
+    background: var(--plate) url(parchment.jpg);
+    background-blend-mode: multiply;
+    color: var(--bone);
 }
 
-.htpc h4 {
-    color: black;
+.card-body h3 {
+    margin: 0 0 0.7rem;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.08em;
+    color: var(--gold);
 }
 
-
-.cocktails {
-    background: url(cocktails.png);
-    background-size: auto 100%;
-    border: 1px solid #8b0000;
-    color: white;
+.card-body p {
+    margin: 0 0 1.4rem;
+    line-height: 1.5;
+    font-size: 1.02rem;
+    color: #e7d8bd;
 }
 
-.sanguine-btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #fff;
-  background: transparent;
-  border: 2px solid #8b0000;
-  border-radius: 0;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: rgba(139, 0, 0, 0.2);
-    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
-
-  &:active {
-    transform: translateY(1px);
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
-  }
+.cta {
+    margin-top: auto;
+    padding: 0.6rem 1.4rem;
+    font-family: "Cinzel", serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gold);
+    border: 1px solid var(--gold-soft);
+    border-radius: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
+.cta:hover {
+    background: var(--blood);
+    border-color: var(--blood);
+    color: var(--bone);
+}
+
+/* Active cards get some life */
+.card:not(.retired):hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.75),
+                0 0 22px -4px rgba(201, 162, 39, 0.45);
+}
+
+/* ---------- Retired: weathered and dimmed ---------- */
+
+.retired .card-media img {
+    filter: grayscale(35%) sepia(18%) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.retired:hover .card-media img {
+    filter: none;
+}
+
+.retired {
+    opacity: 0.92;
+}
+
+/* ---------- Footer ---------- */
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #ffffff;
-    background-color: #333333;
+    margin-top: 3rem;
+    padding: 1.1rem 0;
     text-align: center;
-    padding: 10px 0;
+    font-family: "Cinzel", serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone);
+    background: rgba(16, 11, 7, 0.9);
+    border-top: 2px solid var(--blood);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 680px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .masthead {
+        min-height: 36vh;
+    }
 }
