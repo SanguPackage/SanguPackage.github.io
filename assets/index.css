@@ -3,6 +3,7 @@
     --ink-soft: #4a3826;
     --blood: #8b0000;
     --blood-bright: #b02a2a;
+    --blood-hot: #e8281a;
     --gold: #c9a227;
     --gold-soft: #b8894b;
     --bone: #f2e7d0;
@@ -36,7 +37,8 @@ body {
     justify-content: center;
     text-align: center;
     padding: 4rem 1.5rem 3.5rem;
-    background: linear-gradient(rgba(16, 11, 7, 0.35), rgba(16, 11, 7, 0.6)),
+    /* Dark oval scrim seats the blood-red title so it doesn't fight the red seal */
+    background: radial-gradient(ellipse 72% 68% at 50% 44%, rgba(6, 3, 3, 0.82), rgba(10, 6, 4, 0.34) 78%),
                 url(sangu.jpg) no-repeat center center;
     background-size: cover;
     border-bottom: 3px solid var(--blood);
@@ -52,19 +54,22 @@ body {
     font-family: "Cinzel Decorative", "Cinzel", serif;
     font-weight: 900;
     font-size: clamp(3.5rem, 12vw, 7rem);
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7), 0 0 24px rgba(139, 0, 0, 0.5);
+    letter-spacing: 0.04em;
+    background: linear-gradient(180deg, #ff5a3c, #c11a1a 50%, #6b0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 18px rgba(200, 20, 20, 0.55)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.85));
 }
 
 .masthead .tagline {
-    margin: 0.2rem 0 1.6rem;
-    font-style: italic;
-    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--blood-bright);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    margin: 0.5rem 0 1.7rem;
+    font-family: "Eater", "Cinzel Decorative", serif;
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
+    letter-spacing: 0.04em;
+    color: var(--blood-hot);
+    text-shadow: 0 0 18px rgba(232, 40, 26, 0.6), 0 1px 2px rgba(0, 0, 0, 0.85);
 }
 
 /* Whispered in the corner of the chart, not shouted */
@@ -96,10 +101,10 @@ main {
 .fleet-heading {
     text-align: center;
     margin: 0 0 2rem;
-    font-family: "Cinzel", serif;
+    font-family: "MedievalSharp", serif;
     font-weight: 700;
-    font-size: clamp(1.4rem, 4vw, 2rem);
-    letter-spacing: 0.12em;
+    font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--ink);
 }
@@ -116,12 +121,17 @@ main {
 }
 
 .fleet-note {
-    text-align: center;
+    width: fit-content;
+    max-width: 90%;
     margin: 1rem auto 2rem;
-    max-width: 32rem;
+    padding: 0.45rem 1.2rem;
     font-style: italic;
-    color: var(--ink);
-    text-shadow: 0 1px 1px rgba(247, 239, 222, 0.6);
+    font-size: 0.98rem;
+    text-align: center;
+    color: var(--bone);
+    background: rgba(12, 8, 5, 0.7);
+    border-radius: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .cards {
@@ -130,14 +140,14 @@ main {
     gap: 2rem;
 }
 
-/* Gold-on-black ornament: `screen` keys out the black, leaving only the rope */
+/* Black keyed to transparency in the PNG; shadow gives the gold an edge on parchment */
 .divider {
     display: block;
     width: 100%;
     max-width: 860px;
     height: auto;
     margin: 3rem auto 2.5rem;
-    mix-blend-mode: screen;
+    filter: saturate(1.15) contrast(1.08) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
     pointer-events: none;
 }
 
