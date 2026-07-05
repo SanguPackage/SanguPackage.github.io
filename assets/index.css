@@ -51,25 +51,22 @@ body {
 
 .masthead h1 {
     margin: 0;
-    font-family: "Cinzel Decorative", "Cinzel", serif;
-    font-weight: 900;
+    font-family: "Caesar Dressing", serif;
+    font-weight: 400;
     font-size: clamp(3.5rem, 12vw, 7rem);
     letter-spacing: 0.04em;
-    background: linear-gradient(180deg, #ff5a3c, #c11a1a 50%, #6b0000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 0 18px rgba(200, 20, 20, 0.55)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.85));
+    color: var(--gold);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
 }
 
 .masthead .tagline {
     display: inline-block;
     margin: 0.5rem 0 1.7rem;
-    font-family: "Eater", "Cinzel Decorative", serif;
+    font-family: "Caesar Dressing", serif;
     font-size: clamp(1.5rem, 5vw, 2.8rem);
     letter-spacing: 0.04em;
     color: var(--blood-hot);
-    text-shadow: 0 0 18px rgba(232, 40, 26, 0.6), 0 1px 2px rgba(0, 0, 0, 0.85);
+    text-shadow: 0 0 12px rgba(232, 40, 26, 0.4), 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Whispered in the corner of the chart, not shouted */
