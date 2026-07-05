@@ -20,12 +20,17 @@ experiments.
 - Manifesto line, worn as a badge of honour: `free · open-source (MIT) · ad-free`.
 
 ### 2. ⚓ Still Sailing (active crew)
-Full-colour, alive (subtle hover life). Two cards:
+Full-colour, alive (subtle hover life). Four cards:
 
 | Project              | Blurb (draft — refine)                                                             | Link                          |
 |----------------------|------------------------------------------------------------------------------------|-------------------------------|
 | **PirateFlix**       | A one-step Home Theater PC. Docker hoists the sails; you just watch.                | `https://sangu.be/htpc`       |
 | **Sanguine Spirits** | Dark, elegant cocktail recipes. Warriors have taste buds too — pure indulgence.     | `https://sangu.be/Sanguine-Spirits` |
+| **Scout**            | Send a scout past the horizon. Open an issue — it sails back with cited, charted findings. | `https://laoujin.github.io/Scout/` |
+| **Meridian**         | A logbook of your voyages. Drop in photos and your travels chart themselves across the map. | `https://laoujin.github.io/Meridian/` |
+
+Scout & Meridian use Midjourney gilded-relief crests (`assets/scout.webp`,
+`assets/meridian.webp`), matching the PirateFlix emblem style.
 
 ### 3. ☠ Run Aground (retired)
 Visually weathered / dimmed so "retired" reads instantly — affectionate, not hidden.
