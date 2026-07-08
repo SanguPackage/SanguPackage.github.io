@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Sangu — 404</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Cinzel:wght@500;700&family=EB+Garamond&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blood-hot: #e8281a;
+            --gold: #c9a227;
+            --bone: #f2e7d0;
+        }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+            font-family: "EB Garamond", Georgia, serif;
+            color: var(--bone);
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: radial-gradient(ellipse 80% 70% at 50% 38%, #1c110a, #0a0605 78%);
+        }
+
+        main { max-width: 40rem; }
+
+        h1 {
+            margin: 0 0 0.4rem;
+            font-family: "Caesar Dressing", serif;
+            font-weight: 400;
+            font-size: clamp(2.4rem, 9vw, 4.2rem);
+            letter-spacing: 0.03em;
+            color: var(--gold);
+            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 .welcome { color: var(--blood-hot); }
+
+        p {
+            font-size: clamp(1.05rem, 3vw, 1.35rem);
+            line-height: 1.6;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 1.6rem;
+            padding: 0.7rem 1.6rem;
+            font-family: "Cinzel", serif;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            color: var(--bone);
+            border: 2px solid var(--gold);
+            border-radius: 3px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .cta:hover { background: var(--gold); color: #100b07; }
+
+        .countdown { margin-top: 1.4rem; font-size: 0.95rem; opacity: 0.7; }
+    </style>
+</head>
+
+<body>
+    <main id="lost">
+        <h1>Lost at sea</h1>
+        <p>This chart leads nowhere. The page you sought has drifted beyond the horizon.</p>
+        <a class="cta" href="https://sangu.be/">Back to port &rarr;</a>
+    </main>
+
+    <script>
+        // /htpc/* moved to its own subdomain (pirateflix.sangu.be); catch the old
+        // 6-year-old deep links here since GitHub Pages has no per-path server redirect.
+        (function () {
+            var p = location.pathname;
+            if (!/^\/htpc(\/|$)/.test(p)) return;
+
+            var dest = "https://pirateflix.sangu.be"
+                + p.replace(/^\/htpc/, "")
+                + location.search
+                + location.hash;
+
+            document.title = "PirateFlix has weighed anchor";
+            document.getElementById("lost").innerHTML =
+                '<h1>The HTPC has sailed.<br><span class="welcome">Welcome aboard PirateFlix.</span></h1>'
+                + '<p>This voyage moved to its own harbour. Weighing anchor for the new port&hellip;</p>'
+                + '<a class="cta" href="' + dest + '">Sail there now &rarr;</a>'
+                + '<p class="countdown">Redirecting in <span id="n">4</span>&hellip;</p>';
+
+            var n = 4;
+            var tick = setInterval(function () {
+                n -= 1;
+                var el = document.getElementById("n");
+                if (el) el.textContent = n;
+                if (n <= 0) { clearInterval(tick); location.replace(dest); }
+            }, 1000);
+        })();
+    </script>
+</body>
+
+</html>
